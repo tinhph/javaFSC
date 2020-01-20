@@ -123,33 +123,32 @@ public class baiTapTexFieldMoRong1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         // Bước 1. Lấy nội dung người dùng nhập vào
         //lấy nội dung từ JtextField1 (họ tên)
-        String hoTen =  jTextField1.getText();
+        String hoTen = jTextField1.getText();
         // lấy nội dung từ Jtextfield2 (tuổi)
         String tuoi = jTextField2.getText();
         //Lấy nội dung từ JTextField3 (lớp)
         String lop = jTextField3.getText();
         //Bước 1.1
         // Kiểm tra
-        if(hoTen==""){
-            jLabel6.setText("Họ tên không được để trống");
-        }else{
-         System.out.println(hoTen);
+        if (hoTen.equals("")) {
+            jLabel6.setText("Bắt buộc nhập");
+        } else {
+            System.out.println(hoTen);
         }
-        if(tuoi==""){
-            jLabel7.setText("Tuổi không được để trống");
-        }else{
-           int tuoiKiemTra = Integer.parseInt(tuoi);
-           if(tuoiKiemTra <= 0) {
-            System.out.println("Tuổi không hợp lệ");
-           }else{
-            System.out.println(tuoi);
-        }
+        if (tuoi.equals("")) {
+            jLabel7.setText("Bắt buộc nhập");
+        } else {
+            int tuoiKiemTra = Integer.parseInt(tuoi);
+            if (tuoiKiemTra <= 0) {
+                System.out.println("Tuổi không hợp lệ");
+            } else {
+                System.out.println(tuoi);
+            }
         }
         // Bước 2. In nội dung ra
-       
-      
+
         System.out.println(lop);
-        
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package baitapswing;
+package jframeButtonLabel;
 
 /**
  *
@@ -37,7 +37,7 @@ public class hello extends javax.swing.JFrame {
 
         Nam.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Nam.setForeground(new java.awt.Color(255, 51, 51));
-        Nam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baitapswing/boy.jpg"))); // NOI18N
+        Nam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframeButtonLabel/boy.jpg"))); // NOI18N
         Nam.setText("Nam");
         Nam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,7 +47,7 @@ public class hello extends javax.swing.JFrame {
 
         Hoa.setFont(new java.awt.Font("Tekton Pro", 1, 48)); // NOI18N
         Hoa.setForeground(new java.awt.Color(51, 51, 255));
-        Hoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baitapswing/girl.JPG"))); // NOI18N
+        Hoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframeButtonLabel/girl.JPG"))); // NOI18N
         Hoa.setText("Hoa");
         Hoa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
