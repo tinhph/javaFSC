@@ -10,7 +10,8 @@ package checkbox;
  * @author admin
  */
 public class Shopping extends javax.swing.JFrame {
-
+   int tongTien = 0;
+   int tongSoDongHo = 0;
     /**
      * Creates new form Shopping
      */
@@ -62,12 +63,21 @@ public class Shopping extends javax.swing.JFrame {
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(255, 51, 51));
         jCheckBox1.setText("300$");
-        jCheckBox1.setMinimumSize(new java.awt.Dimension(77, 33));
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         jCheckBox2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jCheckBox2.setForeground(new java.awt.Color(255, 51, 51));
         jCheckBox2.setText("200$");
         jCheckBox2.setPreferredSize(new java.awt.Dimension(88, 44));
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
 
         jCheckBox3.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jCheckBox3.setForeground(new java.awt.Color(255, 51, 51));
@@ -178,10 +188,11 @@ public class Shopping extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel3)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(107, 107, 107)
@@ -193,7 +204,7 @@ public class Shopping extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox1)
                             .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox3))))
                 .addGap(18, 18, 18)
@@ -206,6 +217,36 @@ public class Shopping extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+        if (jCheckBox1.isSelected() == true){
+            tongTien = tongTien + 300;
+            tongSoDongHo = tongSoDongHo + 1;
+            jLabel10.setText("Tổng số tiền: " + tongTien);
+            jLabel5.setText("Tổng số đồng hồ đã chọn: " + tongSoDongHo);
+        }else{
+            tongTien = tongTien - 300;
+            tongSoDongHo = tongSoDongHo - 1;
+            jLabel10.setText("Tổng số tiền: " + tongTien);
+            jLabel5.setText("Tổng số đồng hồ đã chọn: " + tongSoDongHo);
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+       if (jCheckBox2.isSelected() == true){
+            tongTien = tongTien + 200;
+            tongSoDongHo = tongSoDongHo + 1;
+            jLabel10.setText("Tổng số tiền: " + tongTien);
+            jLabel5.setText("Tổng số đồng hồ đã chọn: " + tongSoDongHo);
+        }else{
+            tongTien = tongTien - 200;
+            tongSoDongHo = tongSoDongHo - 1;
+            jLabel10.setText("Tổng số tiền: " + tongTien);
+            jLabel5.setText("Tổng số đồng hồ đã chọn: " + tongSoDongHo);
+        }
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     /**
      * @param args the command line arguments
