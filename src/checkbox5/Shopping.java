@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package checkbox;
+package checkbox5;
 
 /**
  *
@@ -48,17 +48,17 @@ public class Shopping extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox/nam1.JPG"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox5/nam1.JPG"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox/nam2.JPG"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox5/nam2.JPG"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox/nam3.JPG"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox5/nam3.JPG"))); // NOI18N
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox/nu1.JPG"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox5/nu1.JPG"))); // NOI18N
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox/nu2.JPG"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox5/nu2.JPG"))); // NOI18N
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox/nu3.JPG"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox5/nu3.JPG"))); // NOI18N
 
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(255, 51, 51));
@@ -97,9 +97,9 @@ public class Shopping extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(253, 87, 49));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox/logo.JPG"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox5/logo.JPG"))); // NOI18N
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox/cart.JPG"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkbox5/cart.JPG"))); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));

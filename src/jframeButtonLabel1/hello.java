@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jframeButtonLabel;
+package jframeButtonLabel1;
 
 /**
  *
@@ -31,13 +31,12 @@ public class hello extends javax.swing.JFrame {
         Hoa = new javax.swing.JButton();
         namNoi = new javax.swing.JLabel();
         hoaNoi = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Nam.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Nam.setForeground(new java.awt.Color(255, 51, 51));
-        Nam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframeButtonLabel/boy.jpg"))); // NOI18N
+        Nam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframeButtonLabel1/boy.jpg"))); // NOI18N
         Nam.setText("Nam");
         Nam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,7 +46,7 @@ public class hello extends javax.swing.JFrame {
 
         Hoa.setFont(new java.awt.Font("Tekton Pro", 1, 48)); // NOI18N
         Hoa.setForeground(new java.awt.Color(51, 51, 255));
-        Hoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframeButtonLabel/girl.JPG"))); // NOI18N
+        Hoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframeButtonLabel1/girl.JPG"))); // NOI18N
         Hoa.setText("Hoa");
         Hoa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,13 +59,6 @@ public class hello extends javax.swing.JFrame {
 
         hoaNoi.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         hoaNoi.setForeground(new java.awt.Color(255, 51, 51));
-
-        jButton1.setText("call Form 2");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,10 +80,6 @@ public class hello extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(hoaNoi)
                         .addGap(144, 144, 144))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(356, 356, 356)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,9 +92,7 @@ public class hello extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Hoa, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Nam))
-                .addGap(44, 44, 44)
-                .addComponent(jButton1)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         pack();
@@ -121,11 +107,6 @@ public class hello extends javax.swing.JFrame {
         // TODO add your handling code here:
         hoaNoi.setText("Mình là Hoa");
     }//GEN-LAST:event_HoaActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.setVisible(false);
-        new jfarme2().setVisible(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,7 +147,6 @@ public class hello extends javax.swing.JFrame {
     private javax.swing.JButton Hoa;
     private javax.swing.JButton Nam;
     private javax.swing.JLabel hoaNoi;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel namNoi;
     // End of variables declaration//GEN-END:variables
 }

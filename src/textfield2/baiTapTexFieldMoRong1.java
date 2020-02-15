@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package textfield;
+package textfield2;
 
 /**
  *
  * @author admin
  */
-public class baiTapTextField extends javax.swing.JFrame {
+public class baiTapTexFieldMoRong1 extends javax.swing.JFrame {
 
     /**
      * Creates new form baiTapTextField
      */
-    public baiTapTextField() {
+    public baiTapTexFieldMoRong1() {
         initComponents();
     }
 
@@ -36,6 +36,9 @@ public class baiTapTextField extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -59,7 +62,7 @@ public class baiTapTextField extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(153, 0, 255));
@@ -84,30 +87,68 @@ public class baiTapTextField extends javax.swing.JFrame {
         jLabel4.setText("THÔNG TIN HỌC SINH");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/textfield/student.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/textfield2/student.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 100, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(255, 204, 51));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Làm lại");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, 180, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, 160, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        jTextField1.setText(" ");
+        jTextField2.setText(" ");
+        jTextField3.setText(" ");
+        jLabel6.setText("");
+        jLabel7.setText("");
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         // Bước 1. Lấy nội dung người dùng nhập vào
         //lấy nội dung từ JtextField1 (họ tên)
-        String hoTen =  jTextField1.getText();
+        String hoTen = jTextField1.getText();
         // lấy nội dung từ Jtextfield2 (tuổi)
         String tuoi = jTextField2.getText();
         //Lấy nội dung từ JTextField3 (lớp)
         String lop = jTextField3.getText();
-
-        // Bước 2. In nội dung ra
-        System.out.println(hoTen);
-        int tuoiKiemTra = Integer.parseInt(tuoi);
-        if(tuoiKiemTra <= 0) {
-            System.out.println("Tuổi không hợp lệ");
-        }else{
-            System.out.println(tuoi);
+        //Bước 1.1
+        // Kiểm tra
+        if (tuoi.isEmpty()) {
+            jLabel6.setText("Bắt buộc nhập");
+        } else {
+            System.out.println(hoTen);
         }
+        if (tuoi.isEmpty()) {
+            jLabel7.setText("Bắt buộc nhập");
+        } else {
+            int tuoiKiemTra = Integer.parseInt(tuoi);
+            if (tuoiKiemTra <= 0) {
+                System.out.println("Tuổi không hợp lệ");
+            } else {
+                System.out.println(tuoi);
+            }
+        }
+        // Bước 2. In nội dung ra
         System.out.println(lop);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -128,31 +169,35 @@ public class baiTapTextField extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(baiTapTextField.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(baiTapTexFieldMoRong1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(baiTapTextField.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(baiTapTexFieldMoRong1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(baiTapTextField.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(baiTapTexFieldMoRong1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(baiTapTextField.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(baiTapTexFieldMoRong1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new baiTapTextField().setVisible(true);
+                new baiTapTexFieldMoRong1().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
